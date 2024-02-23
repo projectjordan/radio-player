@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>radio2k.</title>
+</head>
+<body> 
+
+    <div class="header-animation">
+        <div class="radio-div">radio2k.</div>
+    </div>
+
+    <button onclick="showHide()" id="aboutBtn">about</button>
+    <div id="myDiv">
+        radio2k is a project heavily inspired by my love for gaming, modern web design,
+        and my need for exploration through different media.  although in its infancy, i hope for radio2k
+        serves as a space where people share music they love with one another
+        as well as discover new sounds. <br>
+        enjoy.<br>
+        vers. 1.11 
+        <!--I intend to add some text in here
+        to kind of show people my mission statement and 
+    what i hope to accomplish in the later stages of development-->
+    </div>
+
+    <div class="animated-image">
+        <img src="imgs/car-cars.gif" alt="" draggable="false">
+    </div>
+
+    <div class="menu-container">
+        <ul id="menu">
+            <a href="#menu" class="menu-button icon-plus" id="openMenu" title="Show stations" ></a>
+            <a href="#0" class="menu-button icon-minus" title="Hide stations"></a>
+            <li class="menu-item">
+                <a href="#menu"  onclick="playMusic('Electro')">
+                    <span class="fa-solid fa-star">
+                        <image class= "stationImage" src="imgs/house.jpg">
+                    </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#menu" onclick="playMusic('Lofi')">
+                        <span class="fa-solid fa-star">
+                            <image class="stationImage" src="imgs/lofi.jpg">
+                        </span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="#menu" onclick="playMusic('Elevator')">
+                    <span class="fa-solid fa-star">
+                        <image class="stationImage" src="imgs/rap.jpg">
+                    </span>
+                </a>   
+            </li>
+            <li class="menu-item">
+                <a href="#menu" onclick="">
+                    <span class="fa-solid fa-star">
+                        <image class="stationImage" src="imgs/rock.jpg">
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="currentInfo"> <br>  
+            <span id="stationName"></span> / 
+            <span id="songName"></span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <h3>click the center</h3>
+            <h4>to show/hide stations.</h4>
+        </div>
+    </div>
+
+    <div class="audioBtns">
+        <button onclick="resumeSong()"><i class="fa-solid fa-play"></i></button>
+        <button onclick="pauseMusic()"><i class="fa-solid fa-pause"></i></button>
+        <button onclick="playLastSong()"><i class="fa-solid fa-backward"></i></button>
+        <button onclick="skipSong()"><i class="fa-solid fa-forward"></i></button>
+    </div>
+
+    <div class="audioContainer">
+        <audio id="audio" onended="playNextSong()">
+        <!-- The audio source will be set dynamically -->
+        </audio>
+        
+        <div id="progressBarContainer">
+            <div id="progressBar" onclick="seek(event)">
+                <div id="currentProgress"></div>
+                <div id="hoverTimeDisplay"></div>
+            </div>
+        </div>
+        <div id="timeDisplay">
+            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/6e48a737b9.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

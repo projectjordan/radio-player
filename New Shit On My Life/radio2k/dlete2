@@ -1,0 +1,15 @@
+Radio2k has made great progress and only a few minor things
+(and one big thing) need to be added before my first major 
+push to an actual domain for people to use/see the app running. 
+    •play/pause/skip and audio controls need to be 
+    integrated into one element for ease of use.
+    •find new fonts for .currentInfo
+    •change background depending on the current station
+    •finalize the design of .currentInfo as well as find a good 
+    place to put the "instructions" for the page where it 
+    seems narutal
+    •make the car gif either stop or disappear when the music is 
+    paused/not playing
+    •lastly (that i can think of RN) is to add the showHide to 
+    somewhere that doesnt interfere with the rest of the 
+    app's UI and is seamless 
